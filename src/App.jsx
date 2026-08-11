@@ -58,7 +58,13 @@ export default function App() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const ctaWhatsApp = "https://wa.me/5511995588000?text=Ol%C3%A1!%20Quero%20agendar%20uma%20consulta%20na%20PETIVA.%20Como%20fa%C3%A7o%20para%20ver%20os%20hor%C3%A1rios%20dispon%C3%ADveis%3F";
+  const baseWhatsApp = "https://wa.me/5511995588000?text=";
+  const ctaGeral = `${baseWhatsApp}Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20na%20Petiva.`;
+  const ctaHero = `${baseWhatsApp}Ol%C3%A1%21%20Vi%20o%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20cir%C3%BArgica%20para%20o%20meu%20pet.`;
+  const ctaPassos = `${baseWhatsApp}Ol%C3%A1%21%20Estava%20lendo%20sobre%20o%20protocolo%20de%20cirurgia%20segura%20no%20site%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas.`;
+  const ctaEspecialidades = `${baseWhatsApp}Ol%C3%A1%21%20Vi%20as%20especialidades%20no%20site%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20um%20procedimento.`;
+  const ctaLocalizacao = `${baseWhatsApp}Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20o%20atendimento%20para%20agendar%20um%20hor%C3%A1rio%20na%20cl%C3%ADnica.`;
+  const ctaFinal = `${baseWhatsApp}Ol%C3%A1%21%20Quero%20agendar%20uma%20consulta%20para%20garantir%20a%20sa%C3%BAde%20do%20meu%20pet.`;
 
   const trackWhatsAppClick = () => {
     window.dataLayer = window.dataLayer || [];
@@ -102,7 +108,7 @@ export default function App() {
             </nav>
 
             <div className="hidden md:flex">
-              <a href={ctaWhatsApp} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border border-accent px-6 py-2.5 rounded-full font-semibold transition-all shadow-sm hover:shadow-md inline-flex items-center justify-center">
+              <a href={ctaGeral} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border border-accent px-6 py-2.5 rounded-full font-semibold transition-all shadow-sm hover:shadow-md inline-flex items-center justify-center">
                 <span className="absolute left-0 top-0 w-0 h-full bg-[#1e8b8d] transition-all duration-500 ease-out group-hover:w-full z-0"></span>
                 <span className="relative z-10 flex items-center gap-2 transition-colors duration-500">
                   Agendar Consulta
@@ -123,7 +129,7 @@ export default function App() {
             <a href="#sobre" onClick={() => setIsMenuOpen(false)} className="block font-medium text-text-body">Sobre Nós</a>
             <a href="#localizacao" onClick={() => setIsMenuOpen(false)} className="block font-medium text-text-body">Localização</a>
             <a href="#contato" onClick={() => setIsMenuOpen(false)} className="block font-medium text-text-body">Contato</a>
-            <a href={ctaWhatsApp} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="block text-center bg-accent text-white px-6 py-3 rounded-lg font-semibold">Agendar Consulta</a>
+            <a href={ctaGeral} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="block text-center bg-accent text-white px-6 py-3 rounded-lg font-semibold">Agendar Consulta</a>
           </div>
         )}
       </header>
@@ -144,7 +150,7 @@ export default function App() {
                   Infraestrutura de alta complexidade com centro cirúrgico avançado, anestesia inalatória e monitoramento intensivo. Máxima segurança para o procedimento do seu pet.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a href={ctaWhatsApp} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border-2 border-accent px-8 py-4 rounded-full font-bold text-lg text-center transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] inline-flex items-center justify-center gap-2">
+                  <a href={ctaHero} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border-2 border-accent px-8 py-4 rounded-full font-bold text-lg text-center transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] inline-flex items-center justify-center gap-2">
                     <span className="absolute left-0 top-0 w-0 h-full bg-[#1e8b8d] transition-all duration-500 ease-out group-hover:w-full z-0"></span>
                     <span className="relative z-10 flex items-center gap-2 transition-colors duration-500">
                       AGENDAR AVALIAÇÃO CIRÚRGICA <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
@@ -164,7 +170,20 @@ export default function App() {
           </div>
         </section>
 
-        {/* 3. SINAIS DE ALERTA */}
+        
+        {/* 2.5 BARRA DE CREDIBILIDADE */}
+        <div className="bg-accent text-white py-4 border-b-4 border-[#1e8b8d]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap justify-center md:justify-between items-center gap-4 text-sm md:text-base font-bold tracking-wide">
+              <span className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-white/80" /> +5.000 Vidas Salvas</span>
+              <span className="hidden md:inline-block w-1.5 h-1.5 bg-white/50 rounded-full"></span>
+              <span className="flex items-center gap-2"><Activity className="w-5 h-5 text-white/80" /> Anestesia Inalatória Padrão Ouro</span>
+              <span className="hidden md:inline-block w-1.5 h-1.5 bg-white/50 rounded-full"></span>
+              <span className="flex items-center gap-2"><UserCheck className="w-5 h-5 text-white/80" /> Equipe de Especialistas</span>
+            </div>
+          </div>
+        </div>
+{/* 3. SINAIS DE ALERTA */}
         <section className="py-16 bg-surface">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-heading font-bold text-primary mb-10">Sinais de que seu pet precisa de avaliação:</h2>
@@ -235,6 +254,141 @@ export default function App() {
           </div>
         </section>
 
+        
+        {/* 5.5 PASSO A PASSO DA CIRURGIA */}
+        <section className="py-24 bg-surface">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-4">Como funciona a <span className="text-accent">Cirurgia Segura</span></h2>
+            <p className="text-lg text-text-body text-center mb-16 max-w-2xl mx-auto">
+              Sabemos que cirurgias e anestesias geram ansiedade. Veja nosso protocolo rígido passo a passo para garantir a vida do seu pet:
+            </p>
+
+            <div className="grid md:grid-cols-4 gap-8">
+              <div className="relative text-center">
+                <div className="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-accent mb-6 relative z-10">
+                  <span className="text-2xl font-heading font-bold text-primary">1</span>
+                </div>
+                <h3 className="font-heading font-bold text-xl text-primary mb-3">Avaliação Pré-Cirúrgica</h3>
+                <p className="text-text-body">Consulta detalhada para entender o histórico do pet, alinhar expectativas e avaliar o risco anestésico inicial.</p>
+              </div>
+
+              <div className="relative text-center">
+                <div className="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-accent mb-6 relative z-10">
+                  <span className="text-2xl font-heading font-bold text-primary">2</span>
+                </div>
+                <h3 className="font-heading font-bold text-xl text-primary mb-3">Exames no Local</h3>
+                <p className="text-text-body">Realizamos hemograma, exames bioquímicos e avaliações cardiológicas (Eletro e Eco) sem você precisar ir a outro lugar.</p>
+              </div>
+
+              <div className="relative text-center">
+                <div className="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-accent mb-6 relative z-10">
+                  <span className="text-2xl font-heading font-bold text-primary">3</span>
+                </div>
+                <h3 className="font-heading font-bold text-xl text-primary mb-3">Centro Cirúrgico Padrão Ouro</h3>
+                <p className="text-text-body">O procedimento é feito com anestesia inalatória e monitoramento multiparamétrico contínuo de sinais vitais por um anestesista.</p>
+              </div>
+
+              <div className="relative text-center">
+                <div className="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-accent mb-6 relative z-10">
+                  <span className="text-2xl font-heading font-bold text-primary">4</span>
+                </div>
+                <h3 className="font-heading font-bold text-xl text-primary mb-3">Recuperação Sem Dor</h3>
+                <p className="text-text-body">Controle de dor rigoroso em baias limpas e seguras. O pet só recebe alta quando estiver 100% acordado, estável e confortável.</p>
+              </div>
+            </div>
+            
+            <div className="mt-16 text-center">
+              <a href={ctaPassos} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="inline-block bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white px-10 py-3 rounded-xl font-bold transition-all shadow-sm hover:shadow-md">
+                TIRAR DÚVIDAS COM A EQUIPE
+              </a>
+            </div>
+          </div>
+        </section>
+{/* 9. DEPOIMENTOS DE TUTORES */}
+        <section className="py-24 bg-surface">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-6">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center md:text-left">O que dizem os <span className="text-accent">nossos pacientes</span></h2>
+              <div className="flex gap-4 justify-center">
+                <button onClick={scrollPrev} className="p-3 rounded-full bg-white text-primary hover:bg-accent hover:text-white shadow-sm border border-gray-100 transition-colors">
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button onClick={scrollNext} className="p-3 rounded-full bg-white text-primary hover:bg-accent hover:text-white shadow-sm border border-gray-100 transition-colors">
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+              </div>
+            </div>
+            
+            <div 
+              ref={sliderRef}
+              className="flex overflow-x-auto gap-8 snap-x snap-mandatory pb-8 hide-scrollbar"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {[
+                { nome: "Mariana e a Mel (Poodle)", txt: "Estava morrendo de medo da anestesia para limpar o tártaro dela. A equipe foi maravilhosa, me explicou tudo, e a Mel voltou para casa super esperta!" },
+                { nome: "Lucas e a Nina (Gata)", txt: "Castrei a Nina com a Dra. Talita. O corte foi super pequeno, no dia seguinte ela já estava brincando como se nada tivesse acontecido." },
+                { nome: "Fernanda e o Thor (Golden)", txt: "Estrutura de primeiro mundo no centro cirúrgico. Fizeram a remoção de um nódulo do Thor com muita competência. A recuperação foi ótima." },
+                { nome: "Roberto e o Simba (Gato)", txt: "A anestesia inalatória e o cuidado no pós-operatório fizeram toda a diferença. O Simba castrou e não sentiu dor alguma, indico de olhos fechados." },
+                { nome: "Camila e o Bento (Spitz)", txt: "Tinha pavor de cirurgia, mas a transparência nos exames pré-operatórios me deu paz. A cirurgia ortopédica foi um sucesso absoluto." },
+                { nome: "João e o Rex (SRD)", txt: "Excelente clínica, profissionais cirurgiões muito atenciosos. Me senti muito seguro ao deixar o Rex para a castração, deu tudo certo." },
+                { nome: "Aline e o Frajola (Gato)", txt: "A limpeza de tártaro do Frajola salvou os dentinhos dele. Ele voltou a comer melhor no mesmo dia. A Dra. Talita é um amor de pessoa!" }
+              ].map((dep, i) => (
+                <div key={i} className="w-[280px] md:w-[320px] shrink-0 bg-white p-6 rounded-xl shadow-sm border border-gray-100 relative snap-start flex flex-col">
+                  <Star className="w-6 h-6 text-yellow-400 absolute top-6 right-6 fill-current" />
+                  <p className="text-base italic text-text-body mb-6 relative z-10 pt-2 flex-grow">"{dep.txt}"</p>
+                  <div className="flex items-center gap-3 mt-auto">
+                    <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center font-bold text-primary shrink-0">{dep.nome.charAt(0)}</div>
+                    <span className="font-heading font-bold text-primary text-sm">{dep.nome}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <style>{`
+              .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+              }
+            `}</style>
+          </div>
+        </section>
+
+        {/* 8. SOBRE A DIRETORA CLÍNICA */}
+        <section id="sobre" className="py-20 bg-primary text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-2 md:order-1">
+                <img 
+                  src="/foto-dra.jpg" 
+                  alt="Dra. Talita Oliveira Rodrigues" 
+                  className="rounded-2xl shadow-2xl w-full aspect-[3/4] md:aspect-[4/5] object-cover object-top"
+                />
+              </div>
+              <div className="order-1 md:order-2">
+                <span className="text-accent font-bold tracking-wider text-sm uppercase mb-4 block">Cirurgiã & Diretora Clínica</span>
+                <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">Dra. Talita Oliveira Rodrigues</h2>
+                
+                <p className="text-xl text-white/90 mb-8 leading-relaxed">
+                  Médica Veterinária formada pela PUC Minas, com vasta experiência em Cirurgia Geral de Tecidos Moles, Profilaxia Odontológica e Endoscopia.
+                </p>
+                
+                <p className="text-lg mb-10 border-l-4 border-accent pl-6 py-2 text-white/80">
+                  "Todo procedimento cirúrgico exige rigor máximo. No Petiva, aplicamos protocolos rígidos de anestesia e esterilização para garantir que seu pet acorde tranquilo e sem dor."
+                </p>
+
+                <div className="grid grid-cols-2 gap-6 mt-8">
+                  <div className="bg-white/10 p-6 rounded-xl border border-white/20">
+                    <span className="block text-3xl font-heading font-bold text-accent mb-2">+Segurança</span>
+                    <span className="text-sm font-medium text-white/90">Anestesia Inalatória e Monitoramento</span>
+                  </div>
+                  <div className="bg-white/10 p-6 rounded-xl border border-white/20">
+                    <span className="block text-3xl font-heading font-bold text-accent mb-2">100%</span>
+                    <span className="text-sm font-medium text-white/90">Estrutura Cirúrgica de Ponta</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* 6. TODAS AS ESPECIALIDADES */}
         <section id="especialidades" className="py-20 bg-surface">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -278,74 +432,12 @@ export default function App() {
             </div>
 
             <div className="mt-8 flex justify-center">
-              <a href={ctaWhatsApp} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border-2 border-accent px-8 py-4 rounded-full font-bold text-lg text-center transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] inline-flex items-center justify-center gap-2">
+              <a href={ctaEspecialidades} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border-2 border-accent px-8 py-4 rounded-full font-bold text-lg text-center transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] inline-flex items-center justify-center gap-2">
                 <span className="absolute left-0 top-0 w-0 h-full bg-[#1e8b8d] transition-all duration-500 ease-out group-hover:w-full z-0"></span>
                 <span className="relative z-10 flex items-center gap-2 transition-colors duration-500">
                   AGENDAR CONSULTA <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
                 </span>
               </a>
-            </div>
-          </div>
-        </section>
-
-        {/* 7. HISTÓRIA E PROPÓSITO */}
-        <section className="py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-16">
-              <div>
-                <h2 className="text-3xl font-heading font-bold text-primary mb-6">Um sonho de família</h2>
-                <p className="text-lg mb-4">A história do Centro Veterinário Petiva nasceu de um desejo compartilhado durante um dos momentos mais difíceis da história recente: a pandemia.</p>
-                <p className="text-lg mb-4">Fundado pela Dra. Talita e seu pai, Alexandre, o objetivo sempre foi claro: criar um espaço onde a infraestrutura hospitalar se aliasse ao calor humano e ao atendimento próximo e respeitoso que cada tutor busca.</p>
-                <p className="text-lg font-medium text-primary">Não somos apenas uma clínica, somos um ambiente de acolhimento focado na resolução.</p>
-              </div>
-              <div className="bg-surface p-10 rounded-2xl border-l-8 border-accent">
-                <h2 className="text-3xl font-heading font-bold text-primary mb-6">Segurança e Bem-estar</h2>
-                <blockquote className="text-xl italic text-text-body mb-6">
-                  "Nosso compromisso é realizar procedimentos com risco minimizado, desde uma limpeza de tártaro até uma cirurgia complexa, garantindo que você entregue seu pet com confiança e o receba saudável e feliz."
-                </blockquote>
-                <div className="flex items-center gap-4 mt-8">
-                  <ShieldCheck className="w-10 h-10 text-accent" />
-                  <span className="font-heading font-bold text-lg text-primary">Cirurgia baseada em excelência e amor.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 8. SOBRE A DIRETORA CLÍNICA */}
-        <section id="sobre" className="py-20 bg-primary text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="order-2 md:order-1">
-                <img 
-                  src="/foto-dra.jpg" 
-                  alt="Dra. Talita Oliveira Rodrigues" 
-                  className="rounded-2xl shadow-2xl w-full aspect-[3/4] md:aspect-[4/5] object-cover object-top"
-                />
-              </div>
-              <div className="order-1 md:order-2">
-                <span className="text-accent font-bold tracking-wider text-sm uppercase mb-4 block">Cirurgiã & Diretora Clínica</span>
-                <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">Dra. Talita Oliveira Rodrigues</h2>
-                
-                <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                  Médica Veterinária formada pela PUC Minas, com vasta experiência em Cirurgia Geral de Tecidos Moles, Profilaxia Odontológica e Endoscopia.
-                </p>
-                
-                <p className="text-lg mb-10 border-l-4 border-accent pl-6 py-2 text-white/80">
-                  "Todo procedimento cirúrgico exige rigor máximo. No Petiva, aplicamos protocolos rígidos de anestesia e esterilização para garantir que seu pet acorde tranquilo e sem dor."
-                </p>
-
-                <div className="grid grid-cols-2 gap-6 mt-8">
-                  <div className="bg-white/10 p-6 rounded-xl border border-white/20">
-                    <span className="block text-3xl font-heading font-bold text-accent mb-2">+Segurança</span>
-                    <span className="text-sm font-medium text-white/90">Anestesia Inalatória e Monitoramento</span>
-                  </div>
-                  <div className="bg-white/10 p-6 rounded-xl border border-white/20">
-                    <span className="block text-3xl font-heading font-bold text-accent mb-2">100%</span>
-                    <span className="text-sm font-medium text-white/90">Estrutura Cirúrgica de Ponta</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -417,110 +509,25 @@ export default function App() {
           </div>
         )}
 
-        {/* 9. DEPOIMENTOS DE TUTORES */}
-        <section className="py-24 bg-surface">
+        {/* 7. HISTÓRIA E PROPÓSITO */}
+        <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-6">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center md:text-left">O que dizem os <span className="text-accent">nossos pacientes</span></h2>
-              <div className="flex gap-4 justify-center">
-                <button onClick={scrollPrev} className="p-3 rounded-full bg-white text-primary hover:bg-accent hover:text-white shadow-sm border border-gray-100 transition-colors">
-                  <ChevronLeft className="w-6 h-6" />
-                </button>
-                <button onClick={scrollNext} className="p-3 rounded-full bg-white text-primary hover:bg-accent hover:text-white shadow-sm border border-gray-100 transition-colors">
-                  <ChevronRight className="w-6 h-6" />
-                </button>
+            <div className="grid md:grid-cols-2 gap-16">
+              <div>
+                <h2 className="text-3xl font-heading font-bold text-primary mb-6">Um sonho de família</h2>
+                <p className="text-lg mb-4">A história do Centro Veterinário Petiva nasceu de um desejo compartilhado durante um dos momentos mais difíceis da história recente: a pandemia.</p>
+                <p className="text-lg mb-4">Fundado pela Dra. Talita e seu pai, Alexandre, o objetivo sempre foi claro: criar um espaço onde a infraestrutura hospitalar se aliasse ao calor humano e ao atendimento próximo e respeitoso que cada tutor busca.</p>
+                <p className="text-lg font-medium text-primary">Não somos apenas uma clínica, somos um ambiente de acolhimento focado na resolução.</p>
               </div>
-            </div>
-            
-            <div 
-              ref={sliderRef}
-              className="flex overflow-x-auto gap-8 snap-x snap-mandatory pb-8 hide-scrollbar"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-            >
-              {[
-                { nome: "Mariana e a Mel (Poodle)", txt: "Estava morrendo de medo da anestesia para limpar o tártaro dela. A equipe foi maravilhosa, me explicou tudo, e a Mel voltou para casa super esperta!" },
-                { nome: "Lucas e a Nina (Gata)", txt: "Castrei a Nina com a Dra. Talita. O corte foi super pequeno, no dia seguinte ela já estava brincando como se nada tivesse acontecido." },
-                { nome: "Fernanda e o Thor (Golden)", txt: "Estrutura de primeiro mundo no centro cirúrgico. Fizeram a remoção de um nódulo do Thor com muita competência. A recuperação foi ótima." },
-                { nome: "Roberto e o Simba (Gato)", txt: "A anestesia inalatória e o cuidado no pós-operatório fizeram toda a diferença. O Simba castrou e não sentiu dor alguma, indico de olhos fechados." },
-                { nome: "Camila e o Bento (Spitz)", txt: "Tinha pavor de cirurgia, mas a transparência nos exames pré-operatórios me deu paz. A cirurgia ortopédica foi um sucesso absoluto." },
-                { nome: "João e o Rex (SRD)", txt: "Excelente clínica, profissionais cirurgiões muito atenciosos. Me senti muito seguro ao deixar o Rex para a castração, deu tudo certo." },
-                { nome: "Aline e o Frajola (Gato)", txt: "A limpeza de tártaro do Frajola salvou os dentinhos dele. Ele voltou a comer melhor no mesmo dia. A Dra. Talita é um amor de pessoa!" }
-              ].map((dep, i) => (
-                <div key={i} className="w-[280px] md:w-[320px] shrink-0 bg-white p-6 rounded-xl shadow-sm border border-gray-100 relative snap-start flex flex-col">
-                  <Star className="w-6 h-6 text-yellow-400 absolute top-6 right-6 fill-current" />
-                  <p className="text-base italic text-text-body mb-6 relative z-10 pt-2 flex-grow">"{dep.txt}"</p>
-                  <div className="flex items-center gap-3 mt-auto">
-                    <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center font-bold text-primary shrink-0">{dep.nome.charAt(0)}</div>
-                    <span className="font-heading font-bold text-primary text-sm">{dep.nome}</span>
-                  </div>
+              <div className="bg-surface p-10 rounded-2xl border-l-8 border-accent">
+                <h2 className="text-3xl font-heading font-bold text-primary mb-6">Segurança e Bem-estar</h2>
+                <blockquote className="text-xl italic text-text-body mb-6">
+                  "Nosso compromisso é realizar procedimentos com risco minimizado, desde uma limpeza de tártaro até uma cirurgia complexa, garantindo que você entregue seu pet com confiança e o receba saudável e feliz."
+                </blockquote>
+                <div className="flex items-center gap-4 mt-8">
+                  <ShieldCheck className="w-10 h-10 text-accent" />
+                  <span className="font-heading font-bold text-lg text-primary">Cirurgia baseada em excelência e amor.</span>
                 </div>
-              ))}
-            </div>
-            <style>{`
-              .hide-scrollbar::-webkit-scrollbar {
-                display: none;
-              }
-            `}</style>
-          </div>
-        </section>
-
-        {/* 10. LOCALIZAÇÃO E HORÁRIOS */}
-        <section id="localizacao" className="py-24 bg-white relative">
-          <div className="absolute inset-0 bg-primary/5"></div>
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="bg-primary rounded-3xl shadow-2xl p-8 md:p-12 text-center text-white border-b-8 border-accent">
-              <span className="inline-block py-1 px-4 rounded-full bg-accent/20 text-accent font-bold text-sm mb-6 border border-accent/50 uppercase tracking-widest">
-                Atendimento Agendado
-              </span>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8 text-white">Nossa Estrutura</h2>
-              
-              <div className="flex flex-col items-center justify-center gap-3 mb-10">
-                <MapPin className="w-8 h-8 text-accent" />
-                <p className="text-xl font-medium text-white">Rua Santa Isabel, 68 - Vila Buarque<br/>São Paulo - SP, 01221-010</p>
-                <a href="https://maps.app.goo.gl/zvXQAPYi3tbajJZTA" target="_blank" rel="noreferrer" className="text-accent hover:text-white underline font-medium mt-2">Abrir no Mapa</a>
-              </div>
-
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
-                <a href={ctaWhatsApp} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="flex items-center justify-center text-white hover:opacity-75 transition-opacity" style={{width:'40px',height:'40px'}}>
-                  <img src="/whatsapp-logo.png" alt="WhatsApp" style={{width:'40px',height:'40px',filter:'brightness(0) invert(1)',objectFit:'contain'}} />
-                </a>
-                <a href="https://www.instagram.com/petivavet/" target="_blank" rel="noreferrer" className="flex items-center justify-center text-white hover:opacity-75 transition-opacity" style={{width:'40px',height:'40px'}}>
-                  <img src="/instagram-logo.png" alt="Instagram" style={{width:'40px',height:'40px',filter:'brightness(0) invert(1)',objectFit:'contain'}} />
-                </a>
-              </div>
-
-              <div className="bg-white/10 rounded-xl p-6 mb-10 max-w-lg mx-auto">
-                <div className="flex items-center justify-center gap-3 mb-4">
-                  <Clock className="w-6 h-6 text-accent" />
-                  <h3 className="text-xl font-heading font-bold text-white">Horários</h3>
-                </div>
-                <div className="space-y-3 text-lg text-white/90">
-                  <div className="flex justify-between border-b border-white/20 pb-2">
-                    <span>Segunda a Sexta</span>
-                    <span className="font-bold text-white">07:00h às 22:00h</span>
-                  </div>
-                  <div className="flex justify-between border-b border-white/20 pb-2">
-                    <span>Sábados</span>
-                    <span className="font-bold text-white">08:00h às 18:00h</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Domingo</span>
-                    <span className="font-bold text-accent">Fechado</span>
-                  </div>
-                </div>
-              </div>
-
-              <a href={ctaWhatsApp} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border-2 border-accent px-8 py-5 rounded-full font-bold text-xl inline-flex items-center justify-center transition-all shadow-xl hover:scale-105 w-full md:w-auto">
-                <span className="absolute left-0 top-0 w-0 h-full bg-[#1e8b8d] transition-all duration-500 ease-out group-hover:w-full z-0"></span>
-                <span className="relative z-10 flex items-center gap-2 transition-colors duration-500">
-                  FALAR COM ATENDIMENTO AGENDADO <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
-                </span>
-              </a>
-
-              <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm font-medium text-white/80">
-                <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-accent"/> Estrutura segura</span>
-                <span className="flex items-center gap-2"><UserCheck className="w-4 h-4 text-accent"/> Profissionais especializados</span>
-                <span className="flex items-center gap-2"><Activity className="w-4 h-4 text-accent"/> Prontuário digital integrado</span>
               </div>
             </div>
           </div>
@@ -552,13 +559,75 @@ export default function App() {
           </div>
         </section>
 
+        {/* 10. LOCALIZAÇÃO E HORÁRIOS */}
+        <section id="localizacao" className="py-24 bg-white relative">
+          <div className="absolute inset-0 bg-primary/5"></div>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="bg-primary rounded-3xl shadow-2xl p-8 md:p-12 text-center text-white border-b-8 border-accent">
+              <span className="inline-block py-1 px-4 rounded-full bg-accent/20 text-accent font-bold text-sm mb-6 border border-accent/50 uppercase tracking-widest">
+                Atendimento Agendado
+              </span>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8 text-white">Nossa Estrutura</h2>
+              
+              <div className="flex flex-col items-center justify-center gap-3 mb-10">
+                <MapPin className="w-8 h-8 text-accent" />
+                <p className="text-xl font-medium text-white">Rua Santa Isabel, 68 - Vila Buarque<br/>São Paulo - SP, 01221-010</p>
+                <a href="https://maps.app.goo.gl/zvXQAPYi3tbajJZTA" target="_blank" rel="noreferrer" className="text-accent hover:text-white underline font-medium mt-2">Abrir no Mapa</a>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
+                <a href={ctaLocalizacao} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="flex items-center justify-center text-white hover:opacity-75 transition-opacity" style={{width:'40px',height:'40px'}}>
+                  <img src="/whatsapp-logo.png" alt="WhatsApp" style={{width:'40px',height:'40px',filter:'brightness(0) invert(1)',objectFit:'contain'}} />
+                </a>
+                <a href="https://www.instagram.com/petivavet/" target="_blank" rel="noreferrer" className="flex items-center justify-center text-white hover:opacity-75 transition-opacity" style={{width:'40px',height:'40px'}}>
+                  <img src="/instagram-logo.png" alt="Instagram" style={{width:'40px',height:'40px',filter:'brightness(0) invert(1)',objectFit:'contain'}} />
+                </a>
+              </div>
+
+              <div className="bg-white/10 rounded-xl p-6 mb-10 max-w-lg mx-auto">
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <Clock className="w-6 h-6 text-accent" />
+                  <h3 className="text-xl font-heading font-bold text-white">Horários</h3>
+                </div>
+                <div className="space-y-3 text-lg text-white/90">
+                  <div className="flex justify-between border-b border-white/20 pb-2">
+                    <span>Segunda a Sexta</span>
+                    <span className="font-bold text-white">07:00h às 22:00h</span>
+                  </div>
+                  <div className="flex justify-between border-b border-white/20 pb-2">
+                    <span>Sábados</span>
+                    <span className="font-bold text-white">08:00h às 18:00h</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Domingo</span>
+                    <span className="font-bold text-accent">Fechado</span>
+                  </div>
+                </div>
+              </div>
+
+              <a href={ctaLocalizacao} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border-2 border-accent px-8 py-5 rounded-full font-bold text-xl inline-flex items-center justify-center transition-all shadow-xl hover:scale-105 w-full md:w-auto">
+                <span className="absolute left-0 top-0 w-0 h-full bg-[#1e8b8d] transition-all duration-500 ease-out group-hover:w-full z-0"></span>
+                <span className="relative z-10 flex items-center gap-2 transition-colors duration-500">
+                  FALAR COM ATENDIMENTO AGENDADO <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                </span>
+              </a>
+
+              <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm font-medium text-white/80">
+                <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-accent"/> Estrutura segura</span>
+                <span className="flex items-center gap-2"><UserCheck className="w-4 h-4 text-accent"/> Profissionais especializados</span>
+                <span className="flex items-center gap-2"><Activity className="w-4 h-4 text-accent"/> Prontuário digital integrado</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* 12. CTA FINAL */}
         <section className="py-24 bg-white text-center">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-8">
               Pronto para garantir uma vida mais longa e <span className="text-accent">saudável</span> para o seu pet?
             </h2>
-            <a href={ctaWhatsApp} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border-2 border-accent px-10 py-6 rounded-full font-bold text-2xl inline-flex items-center justify-center transition-all shadow-xl hover:scale-105 mb-10 w-full md:w-auto">
+            <a href={ctaFinal} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border-2 border-accent px-10 py-6 rounded-full font-bold text-2xl inline-flex items-center justify-center transition-all shadow-xl hover:scale-105 mb-10 w-full md:w-auto">
               <span className="absolute left-0 top-0 w-0 h-full bg-[#1e8b8d] transition-all duration-500 ease-out group-hover:w-full z-0"></span>
               <span className="relative z-10 flex items-center gap-2 transition-colors duration-500">
                 Agende sua consulta agora <ArrowRight className="w-6 h-6 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
@@ -588,7 +657,7 @@ export default function App() {
 
           <div className="flex flex-col md:flex-row gap-6 md:gap-10 text-sm text-gray-300 font-medium items-center">
             <div className="flex gap-6 items-center">
-              <a href={ctaWhatsApp} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="hover:opacity-75 transition-opacity flex items-center">
+              <a href={ctaGeral} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="hover:opacity-75 transition-opacity flex items-center">
                 <img src="/whatsapp-logo.png" alt="WhatsApp" className="h-7 w-auto brightness-0 invert object-contain" />
               </a>
               <a href="https://www.instagram.com/petivavet/" target="_blank" rel="noreferrer" className="hover:opacity-75 transition-opacity flex items-center">
@@ -601,7 +670,7 @@ export default function App() {
 
       {/* 14. FLOATING WHATSAPP BUTTON */}
       <a 
-        href={ctaWhatsApp} 
+        href={ctaGeral} 
         target="_blank" 
         rel="noreferrer" 
         onClick={trackWhatsAppClick}
