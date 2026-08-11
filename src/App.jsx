@@ -14,18 +14,18 @@ export default function App() {
   const sliderRef = useRef(null);
 
   const galleryImages = [
-    "/estrutura/Clinica-Veterinaria-perto-de-mim-mais-proxima-Centro-de-Sao-Paulo-Consultas-Internacoes-Cirurgias-Exames-Castracao-internacao-emergencia-24h-atendimento-especializado-caes-gatos.-diagnostico-recep-1-scaled.jpg",
-    "/estrutura/Clinica-Veterinaria-perto-de-mim-mais-proxima-Centro-de-Sao-Paulo-Consultas-doencas-vacinacao-Castracao-internacao-alimentacao-atendimento-especializado-caes-gatos.-consulta-veterinaria-SALA-scaled.jpg",
-    "/estrutura/Clinica-Veterinaria-perto-de-mim-mais-proxima-Centro-de-Sao-Paulo-parasitas-doencas-vacinacao-Castracao-internacao-alimentacao-atendimento-especializado-caes-gatos.-consulta-veterinaria-1-scaled.jpg",
-    "/estrutura/Clinica-Veterinaria-perto-de-mim-mais-proxima-Centro-de-Sao-Paulo-parasitas-doencas-vacinacao-Castracao-tratamento-alimentacao-atendimento-especializado-caes-gatos.-consulta-veterinaria.-scaled.jpg",
-    "/estrutura/problemas-dentarios-cinomose-vermes-raiva-gripe-canina-doenca-do-trato-urinario-vacinacao-medicamentos-tratamentoatendimento-especializado-cachorro-gato-consulta-leishmaniose-veterinaria-checkup-scaled.jpg",
-    "/estrutura/Clinica-Veterinaria-perto-de-mim-mais-proxima-Centro-de-Sao-Paulo-parasitas-doencas-vacinacao-Castracao-tratamento-alimentacao-atendimento-especializado-caes-gatos.-consulta-veterinaria-checkup-1-scaled.jpg",
-    "/estrutura/Centro-cirurgico-scaled.jpeg",
-    "/estrutura/IMG_7868-scaled.jpg",
-    "/estrutura/IMG_7865-1-scaled.jpg",
-    "/estrutura/IMG_7845-scaled.jpg",
-    "/estrutura/IMG_7843-1-scaled.jpg",
-    "/estrutura/Paramentacao-1-scaled.jpg"
+    "/estrutura/1.jpeg",
+    "/estrutura/2.jpg",
+    "/estrutura/3.jpg",
+    "/estrutura/4.jpg",
+    "/estrutura/5.jpg",
+    "/estrutura/6.jpg",
+    "/estrutura/7.jpg",
+    "/estrutura/8.jpg",
+    "/estrutura/9.jpg",
+    "/estrutura/10.jpg",
+    "/estrutura/11.jpg",
+    "/estrutura/12.jpg"
   ];
 
   const nextLightboxImage = (e) => {
@@ -66,29 +66,21 @@ export default function App() {
   };
 
   const especialidades = [
-    { nome: "Cardiologia", desc: "Avaliações e acompanhamento precoce de doenças cardíacas." },
-    { nome: "Cirurgias e Endoscopias", desc: "Procedimentos cirúrgicos seguros e diagnósticos minimamente invasivos.", cirurgia: true },
-    { nome: "Dermatologia", desc: "Tratamento de alergias, infecções e alterações hormonais." },
-    { nome: "Endocrinologia", desc: "Controle de diabetes, hipotireoidismo e distúrbios da adrenal." },
-    { nome: "Gastroenterologia", desc: "Investigação de vômitos e reabilitação do trato gastrointestinal." },
-    { nome: "Hematologia", desc: "Avaliação de anemias, infecções e distúrbios de coagulação." },
-    { nome: "Medicina de Animais Silvestres e Exóticos", desc: "Atendimento especializado para aves, répteis e pequenos mamíferos." },
-    { nome: "Medicina Felina", desc: "Atendimento exclusivo com foco total no comportamento e particularidades dos gatos." },
-    { nome: "Nefrologia", desc: "Prevenção e manejo contínuo de doenças renais." },
-    { nome: "Nutrologia", desc: "Planos alimentares personalizados por idade e condição física." },
-    { nome: "Odontologia", desc: "Prevenção, diagnóstico e tratamento de doenças da cavidade oral." },
-    { nome: "Oftalmologia", desc: "Diagnóstico de catarata, glaucoma e úlceras de córnea." },
-    { nome: "Oncologia", desc: "Diagnóstico precoce e suporte humanizado no câncer." },
-    { nome: "Ortopedia", desc: "Tratamento de fraturas, luxações e osteoartrite.", cirurgia: true },
-    { nome: "Pneumologia", desc: "Tratamento de asma, bronquite e suporte respiratório." }
+    { nome: "Castração (Fêmeas e Machos)", desc: "Procedimento seguro para cães e gatos, prevenindo tumores, infecções uterinas e comportamentos indesejados.", cirurgia: true },
+    { nome: "Profilaxia Odontológica", desc: "Limpeza de tártaro com ultrassom, prevenindo perda de dentes, dor intensa e infecções sistêmicas.", cirurgia: true },
+    { nome: "Cirurgias de Tecidos Moles", desc: "Remoção de nódulos, biópsias, cirurgias gastrointestinais e do sistema reprodutor.", cirurgia: true },
+    { nome: "Cirurgias Ortopédicas", desc: "Correção de fraturas, luxações e ruptura de ligamento cruzado com técnicas avançadas.", cirurgia: true },
+    { nome: "Cirurgias Oncológicas", desc: "Remoção de tumores com margem de segurança e suporte cirúrgico avançado.", cirurgia: true },
+    { nome: "Odontologia Especializada", desc: "Extrações dentárias complexas e tratamento de doenças periodontais graves sob anestesia segura.", cirurgia: true },
+    { nome: "Cirurgias de Emergência", desc: "Intervenções rápidas e precisas para salvar vidas em casos críticos e agudos.", cirurgia: true },
   ];
 
   const faqs = [
-    { q: "Como funciona o atendimento exclusivo para gatos?", a: "Nosso ambiente Cat Friendly conta com recepção separada, difusores de feromônios e uma equipe treinada em comportamento felino para garantir zero estresse durante a consulta." },
-    { q: "Vocês realizam exames e cirurgias no próprio local?", a: "Sim. Possuímos centro cirúrgico de alta tecnologia e laboratório integrado para diagnósticos e procedimentos de ponta sem precisar de deslocamento." },
-    { q: "Preciso agendar consulta ou atendem por ordem de chegada?", a: "Para garantir o padrão de excelência e tempo adequado para cada paciente, nosso atendimento é realizado com hora marcada." },
-    { q: "Quais são as formas de pagamento aceitas?", a: "Aceitamos cartões de crédito em até 12x, débito, Pix e transferência bancária." },
-    { q: "Como funciona a avaliação com especialistas?", a: "Primeiro, realizamos uma triagem ou encaminhamento clínico. O especialista focado na área fará uma avaliação profunda e integrada para um diagnóstico preciso." }
+    { q: "A anestesia é segura para o meu pet?", a: "Sim! Utilizamos anestesia inalatória, aliada ao suporte de ventilação mecânica e monitoramento multiparamétrico feito por um anestesista veterinário." },
+    { q: "Qual a idade ideal para realizar a castração?", a: "Para cães de pequeno porte e gatos, recomenda-se a partir dos 5 a 6 meses. Para cães grandes, o protocolo pode variar. Agende uma avaliação para definirmos o momento exato e seguro." },
+    { q: "Com qual idade devo fazer a primeira limpeza de tártaro?", a: "Não existe idade fixa, mas cães de pequeno porte precisam mais cedo (1 a 2 anos). O mau hálito e a gengiva vermelha são os principais alertas de que chegou a hora." },
+    { q: "Quais são as formas de pagamento aceitas?", a: "Para sua facilidade, aceitamos cartões de crédito em até 12x, débito, Pix e transferência bancária." },
+    { q: "Vocês realizam os exames pré-operatórios na clínica?", a: "Sim, realizamos todos os exames de sangue e cardiológicos necessários no nosso centro de diagnóstico para aprovação cirúrgica." }
   ];
 
   return (
@@ -143,19 +135,19 @@ export default function App() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <span className="inline-block py-1 px-3 rounded-full bg-surface text-primary font-semibold text-sm mb-6 border border-gray-200">
-                  CENTRO VETERINÁRIO ESPECIALIZADO NA VILA BUARQUE
+                  CENTRO CIRÚRGICO VETERINÁRIO NA VILA BUARQUE
                 </span>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-primary leading-tight mb-6">
-                  Excelência médica e cuidado <span className="text-accent">genuíno</span> para quem você mais ama.
+                  Cirurgias seguras, Profilaxia e Castração com <span className="text-accent">excelência</span>.
                 </h1>
                 <p className="text-lg md:text-xl text-text-body mb-8 leading-relaxed">
-                  Infraestrutura clínica de ponta com 15 especialidades, centro cirúrgico avançado e um ambiente desenhado para o máximo conforto de cães e gatos. Diagnósticos precisos, intervenções seguras.
+                  Infraestrutura de alta complexidade com centro cirúrgico avançado, anestesia inalatória e monitoramento intensivo. Máxima segurança para o procedimento do seu pet.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a href={ctaWhatsApp} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border-2 border-accent px-8 py-4 rounded-full font-bold text-lg text-center transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] inline-flex items-center justify-center gap-2">
                     <span className="absolute left-0 top-0 w-0 h-full bg-[#1e8b8d] transition-all duration-500 ease-out group-hover:w-full z-0"></span>
                     <span className="relative z-10 flex items-center gap-2 transition-colors duration-500">
-                      AGENDAR CONSULTA <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                      AGENDAR AVALIAÇÃO CIRÚRGICA <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
                     </span>
                   </a>
                 </div>
@@ -163,7 +155,7 @@ export default function App() {
               <div className="relative">
                 <div className="absolute inset-0 bg-accent/10 rounded-2xl transform rotate-3 scale-105 -z-10"></div>
                 <img 
-                  src="/IMG_5235.jpg" 
+                  src="/estrutura/f16606a4-35f5-4fca-999f-a268bf4bba8c.png" 
                   alt="Cachorrinho paciente no centro cirúrgico da Petiva" 
                   className="rounded-2xl shadow-2xl object-cover h-[500px] w-full"
                 />
@@ -175,13 +167,13 @@ export default function App() {
         {/* 3. SINAIS DE ALERTA */}
         <section className="py-16 bg-surface">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-heading font-bold text-primary mb-10">O seu pet apresenta algum destes sinais?</h2>
+            <h2 className="text-3xl font-heading font-bold text-primary mb-10">Sinais de que seu pet precisa de avaliação:</h2>
             <div className="space-y-4 text-left md:text-center">
-              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Coceira e vermelhidão contínua</span> que não melhoram com banhos.</p>
-              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Vômitos ou desconfortos digestivos frequentes</span> após as refeições.</p>
-              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Cansaço excessivo ou tosse constante</span>, mesmo em repouso.</p>
-              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Dificuldade para andar ou mancar</span> de forma persistente.</p>
-              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Isolamento e estresse incomum</span>, especialmente notável em felinos.</p>
+              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Mau hálito forte e persistente</span>, indicando avanço da doença periodontal e acúmulo de tártaro.</p>
+              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Gengivas avermelhadas ou sangrando</span> ao mastigar brinquedos ou ração.</p>
+              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Presença de nódulos (caroços)</span> na pele ou nas mamas que não estavam lá antes.</p>
+              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Dificuldade para andar ou mancar</span> de forma persistente, o que pode indicar necessidade de cirurgia ortopédica.</p>
+              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Crescimento de filhote (5 a 6 meses)</span>, marcando a época ideal para castração e prevenção de tumores.</p>
             </div>
           </div>
         </section>
@@ -220,8 +212,8 @@ export default function App() {
                 <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
                   <HeartPulse className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="text-2xl font-heading font-bold text-primary mb-4">Medicina Felina</h3>
-                <p className="text-lg text-text-body">Atendimento exclusivo com foco total no comportamento do gato. Menos estresse, maior segurança e precisão na avaliação clínica.</p>
+                <h3 className="text-2xl font-heading font-bold text-primary mb-4">Anestesia Segura (Inalatória)</h3>
+                <p className="text-lg text-text-body">Utilizamos anestesia inalatória com monitoramento multiparamétrico constante, minimizando riscos e garantindo um despertar suave e sem dor.</p>
               </div>
               
               <div className="group bg-surface rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border border-gray-100">
@@ -229,15 +221,15 @@ export default function App() {
                   <Stethoscope className="w-8 h-8 text-accent" />
                 </div>
                 <h3 className="text-2xl font-heading font-bold text-primary mb-4">Centro Cirúrgico Avançado</h3>
-                <p className="text-lg text-text-body">Monitoramento de ponta, protocolos anestésicos modernos e estrutura hospitalar para cirurgias complexas e seguras.</p>
+                <p className="text-lg text-text-body">Ambiente rigorosamente esterilizado com equipamentos de suporte à vida de ponta, preparado para castrações eletivas e cirurgias complexas.</p>
               </div>
               
               <div className="group bg-surface rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border border-gray-100">
                 <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
                   <Activity className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="text-2xl font-heading font-bold text-primary mb-4">Endoscopia Veterinária</h3>
-                <p className="text-lg text-text-body">Visualização interna direta com tecnologia minimamente invasiva. Garanta recuperações aceleradas e menor risco anestésico.</p>
+                <h3 className="text-2xl font-heading font-bold text-primary mb-4">Recuperação Humanizada</h3>
+                <p className="text-lg text-text-body">Controle rigoroso de dor no pós-operatório e baias super confortáveis. Seu pet fica sob observação intensiva até estar 100% pronto para voltar.</p>
               </div>
             </div>
           </div>
@@ -246,7 +238,7 @@ export default function App() {
         {/* 6. TODAS AS ESPECIALIDADES */}
         <section id="especialidades" className="py-20 bg-surface">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-12">15 especialidades para um <span className="text-accent">diagnóstico preciso</span></h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-12">Procedimentos com máxima <span className="text-accent">segurança clínica</span></h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {(showAllEspecialidades ? especialidades : especialidades.slice(0, 6)).map((esp, i) => (
@@ -266,7 +258,7 @@ export default function App() {
                   onClick={() => setShowAllEspecialidades(true)}
                   className="bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white px-10 py-3 rounded-xl font-bold transition-all shadow-sm hover:shadow-md"
                 >
-                  VER MAIS ESPECIALIDADES
+                  VER MAIS PROCEDIMENTOS
                 </button>
               ) : (
                 <button 
@@ -280,7 +272,7 @@ export default function App() {
                   }}
                   className="bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white px-10 py-3 rounded-xl font-bold transition-all shadow-sm hover:shadow-md"
                 >
-                  VER MENOS ESPECIALIDADES
+                  VER MENOS PROCEDIMENTOS
                 </button>
               )}
             </div>
@@ -307,13 +299,13 @@ export default function App() {
                 <p className="text-lg font-medium text-primary">Não somos apenas uma clínica, somos um ambiente de acolhimento focado na resolução.</p>
               </div>
               <div className="bg-surface p-10 rounded-2xl border-l-8 border-accent">
-                <h2 className="text-3xl font-heading font-bold text-primary mb-6">Foco em pessoas e pacientes</h2>
+                <h2 className="text-3xl font-heading font-bold text-primary mb-6">Segurança e Bem-estar</h2>
                 <blockquote className="text-xl italic text-text-body mb-6">
-                  "Nós abandonamos o modelo clínico frio e genérico. Nosso manifesto é simples: tratar a saúde com a máxima precisão técnica, sem esquecer a empatia, o respeito e a transparência em cada etapa do processo."
+                  "Nosso compromisso é realizar procedimentos com risco minimizado, desde uma limpeza de tártaro até uma cirurgia complexa, garantindo que você entregue seu pet com confiança e o receba saudável e feliz."
                 </blockquote>
                 <div className="flex items-center gap-4 mt-8">
                   <ShieldCheck className="w-10 h-10 text-accent" />
-                  <span className="font-heading font-bold text-lg text-primary">Medicina baseada em evidências e amor.</span>
+                  <span className="font-heading font-bold text-lg text-primary">Cirurgia baseada em excelência e amor.</span>
                 </div>
               </div>
             </div>
@@ -332,25 +324,25 @@ export default function App() {
                 />
               </div>
               <div className="order-1 md:order-2">
-                <span className="text-accent font-bold tracking-wider text-sm uppercase mb-4 block">Diretora Técnica & Fundadora</span>
+                <span className="text-accent font-bold tracking-wider text-sm uppercase mb-4 block">Cirurgiã & Diretora Clínica</span>
                 <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">Dra. Talita Oliveira Rodrigues</h2>
                 
                 <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                  Médica Veterinária formada pela PUC Minas, especialista em Cirurgia Geral, Medicina Felina e Endoscopia Veterinária.
+                  Médica Veterinária formada pela PUC Minas, com vasta experiência em Cirurgia Geral de Tecidos Moles, Profilaxia Odontológica e Endoscopia.
                 </p>
                 
                 <p className="text-lg mb-10 border-l-4 border-accent pl-6 py-2 text-white/80">
-                  "Fundamos o Petiva com foco em gestão de processos assistenciais seguros, eficientes e centrados no bem-estar animal absoluto. Seu pet é único, nosso cuidado também."
+                  "Todo procedimento cirúrgico exige rigor máximo. No Petiva, aplicamos protocolos rígidos de anestesia e esterilização para garantir que seu pet acorde tranquilo e sem dor."
                 </p>
 
                 <div className="grid grid-cols-2 gap-6 mt-8">
                   <div className="bg-white/10 p-6 rounded-xl border border-white/20">
-                    <span className="block text-3xl font-heading font-bold text-accent mb-2">15</span>
-                    <span className="text-sm font-medium text-white/90">Especialidades Disponíveis Integradas</span>
+                    <span className="block text-3xl font-heading font-bold text-accent mb-2">+Segurança</span>
+                    <span className="text-sm font-medium text-white/90">Anestesia Inalatória e Monitoramento</span>
                   </div>
                   <div className="bg-white/10 p-6 rounded-xl border border-white/20">
                     <span className="block text-3xl font-heading font-bold text-accent mb-2">100%</span>
-                    <span className="text-sm font-medium text-white/90">Estrutura Completa de Ponta</span>
+                    <span className="text-sm font-medium text-white/90">Estrutura Cirúrgica de Ponta</span>
                   </div>
                 </div>
               </div>
@@ -446,13 +438,13 @@ export default function App() {
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {[
-                { nome: "Mariana e o Bento (Spitz)", txt: "A Dra. Talita foi impecável na cirurgia ortopédica do Bento. A recuperação foi extremamente rápida e a equipe nos deu total suporte via WhatsApp." },
-                { nome: "Lucas e a Nina (Gata)", txt: "O espaço exclusivo para felinos fez toda a diferença. A Nina é muito assustada e pela primeira vez não voltou estressada da consulta." },
-                { nome: "Fernanda e o Thor (Golden)", txt: "Estrutura de primeiro mundo! Precisamos de uma endoscopia de emergência e eles resolveram tudo no mesmo dia com uma competência admirável." },
-                { nome: "Roberto e o Simba (Gato)", txt: "O foco no comportamento e o diagnóstico integrado salvaram a vida do Simba quando ele apresentou problemas renais. Indico de olhos fechados." },
-                { nome: "Camila e a Mel (Poodle)", txt: "Atendimento maravilhoso! A equipe é muito carinhosa e o diagnóstico foi rápido e preciso, me senti muito acolhida." },
-                { nome: "João e o Rex (SRD)", txt: "Excelente clínica, com profissionais muito atenciosos. Me senti muito seguro ao deixar o Rex para a cirurgia e a recuperação foi ótima." },
-                { nome: "Aline e o Frajola (Gato)", txt: "A sala Cat Friendly é um diferencial incrível. O Frajola foi super bem tratado e a Dra. Talita é um amor de pessoa e profissional!" }
+                { nome: "Mariana e a Mel (Poodle)", txt: "Estava morrendo de medo da anestesia para limpar o tártaro dela. A equipe foi maravilhosa, me explicou tudo, e a Mel voltou para casa super esperta!" },
+                { nome: "Lucas e a Nina (Gata)", txt: "Castrei a Nina com a Dra. Talita. O corte foi super pequeno, no dia seguinte ela já estava brincando como se nada tivesse acontecido." },
+                { nome: "Fernanda e o Thor (Golden)", txt: "Estrutura de primeiro mundo no centro cirúrgico. Fizeram a remoção de um nódulo do Thor com muita competência. A recuperação foi ótima." },
+                { nome: "Roberto e o Simba (Gato)", txt: "A anestesia inalatória e o cuidado no pós-operatório fizeram toda a diferença. O Simba castrou e não sentiu dor alguma, indico de olhos fechados." },
+                { nome: "Camila e o Bento (Spitz)", txt: "Tinha pavor de cirurgia, mas a transparência nos exames pré-operatórios me deu paz. A cirurgia ortopédica foi um sucesso absoluto." },
+                { nome: "João e o Rex (SRD)", txt: "Excelente clínica, profissionais cirurgiões muito atenciosos. Me senti muito seguro ao deixar o Rex para a castração, deu tudo certo." },
+                { nome: "Aline e o Frajola (Gato)", txt: "A limpeza de tártaro do Frajola salvou os dentinhos dele. Ele voltou a comer melhor no mesmo dia. A Dra. Talita é um amor de pessoa!" }
               ].map((dep, i) => (
                 <div key={i} className="w-[280px] md:w-[320px] shrink-0 bg-white p-6 rounded-xl shadow-sm border border-gray-100 relative snap-start flex flex-col">
                   <Star className="w-6 h-6 text-yellow-400 absolute top-6 right-6 fill-current" />
