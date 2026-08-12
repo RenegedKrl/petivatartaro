@@ -202,58 +202,34 @@ export default function App() {
           </div>
         </section>
 
-        {/* 4. A VIRADA */}
-        <section className="py-20 bg-primary text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-white">Não trate sintomas isolados. <br/><span className="text-accent">Cuide da saúde integral</span> do seu pet.</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/10 p-8 rounded-xl backdrop-blur-sm border border-white/20">
-                <Activity className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="font-heading font-bold text-xl mb-2 text-white">Diagnóstico Integrado</h3>
-                <p className="text-white/80">Análise completa que cruza especialidades para chegar à causa real do problema.</p>
-              </div>
-              <div className="bg-white/10 p-8 rounded-xl backdrop-blur-sm border border-white/20">
-                <ShieldCheck className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="font-heading font-bold text-xl mb-2 text-white">Tecnologia Minimamente Invasiva</h3>
-                <p className="text-white/80">Endoscopia e equipamentos de ponta para intervenções seguras e recuperação rápida.</p>
-              </div>
-              <div className="bg-white/10 p-8 rounded-xl backdrop-blur-sm border border-white/20">
-                <HeartPulse className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="font-heading font-bold text-xl mb-2 text-white">Ambiente Cat Friendly</h3>
-                <p className="text-white/80">Estrutura e equipe adaptadas para reduzir drasticamente o estresse dos felinos.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* 5. OS PILARES DE EXCELÊNCIA */}
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-primary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-16">A estrutura que o seu <span className="text-accent">melhor amigo merece</span></h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-white text-center mb-16">A estrutura que o seu <span className="text-accent">melhor amigo merece</span></h2>
             
             <div className="grid md:grid-cols-3 gap-10">
-              <div className="group bg-surface rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border border-gray-100">
-                <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
+              <div className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+                <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center mb-6">
                   <HeartPulse className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="text-2xl font-heading font-bold text-primary mb-4">Anestesia Segura (Inalatória)</h3>
-                <p className="text-lg text-text-body">Utilizamos anestesia inalatória com monitoramento multiparamétrico constante, minimizando riscos e garantindo um despertar suave e sem dor.</p>
+                <h3 className="text-2xl font-heading font-bold text-white mb-4">Anestesia Segura (Inalatória)</h3>
+                <p className="text-lg text-white/80">Utilizamos anestesia inalatória com monitoramento multiparamétrico constante, minimizando riscos e garantindo um despertar suave e sem dor.</p>
               </div>
               
-              <div className="group bg-surface rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border border-gray-100">
-                <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
+              <div className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+                <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center mb-6">
                   <Stethoscope className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="text-2xl font-heading font-bold text-primary mb-4">Centro Cirúrgico Avançado</h3>
-                <p className="text-lg text-text-body">Ambiente rigorosamente esterilizado com equipamentos de suporte à vida de ponta, preparado para profilaxia e cirurgias complexas.</p>
+                <h3 className="text-2xl font-heading font-bold text-white mb-4">Centro Cirúrgico Avançado</h3>
+                <p className="text-lg text-white/80">Ambiente rigorosamente esterilizado com equipamentos de suporte à vida de ponta, preparado para profilaxia e cirurgias complexas.</p>
               </div>
               
-              <div className="group bg-surface rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border border-gray-100">
-                <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
+              <div className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+                <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center mb-6">
                   <Activity className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="text-2xl font-heading font-bold text-primary mb-4">Recuperação Humanizada</h3>
-                <p className="text-lg text-text-body">Controle rigoroso de dor no pós-operatório e baias super confortáveis. Seu pet fica sob observação intensiva até estar 100% pronto para voltar.</p>
+                <h3 className="text-2xl font-heading font-bold text-white mb-4">Recuperação Humanizada</h3>
+                <p className="text-lg text-white/80">Controle rigoroso de dor no pós-operatório e baias super confortáveis. Seu pet fica sob observação intensiva até estar 100% pronto para voltar.</p>
               </div>
             </div>
           </div>
