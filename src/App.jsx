@@ -60,7 +60,7 @@ export default function App() {
 
   const baseWhatsApp = "https://wa.me/5511995588000?text=";
   const ctaGeral = `${baseWhatsApp}Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20na%20Petiva.`;
-  const ctaHero = `${baseWhatsApp}Ol%C3%A1%21%20Vi%20o%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20cir%C3%BArgica%20para%20o%20meu%20pet.`;
+  const ctaHero = `${baseWhatsApp}Ol%C3%A1%21%20Vi%20o%20site%20e%20gostaria%20de%20agendar%20uma%20limpeza%20de%20t%C3%A1rtaro%20para%20o%20meu%20pet.`;
   const ctaPassos = `${baseWhatsApp}Ol%C3%A1%21%20Estava%20lendo%20sobre%20o%20protocolo%20de%20cirurgia%20segura%20no%20site%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas.`;
   const ctaEspecialidades = `${baseWhatsApp}Ol%C3%A1%21%20Vi%20as%20especialidades%20no%20site%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20um%20procedimento.`;
   const ctaLocalizacao = `${baseWhatsApp}Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20o%20atendimento%20para%20agendar%20um%20hor%C3%A1rio%20na%20cl%C3%ADnica.`;
@@ -72,16 +72,26 @@ export default function App() {
   };
 
   const especialidades = [
-    { nome: "Castração (Fêmeas e Machos)", desc: "Procedimento seguro para cães e gatos, prevenindo tumores, infecções uterinas e comportamentos indesejados.", cirurgia: true },
-    { nome: "Cirurgias de Tecidos Moles", desc: "Remoção de nódulos, biópsias, cirurgias gastrointestinais e do sistema reprodutor.", cirurgia: true },
-    { nome: "Cirurgias Ortopédicas", desc: "Correção de fraturas, luxações e ruptura de ligamento cruzado com técnicas avançadas.", cirurgia: true },
-    { nome: "Cirurgias Oncológicas", desc: "Remoção de tumores com margem de segurança e suporte cirúrgico avançado.", cirurgia: true },
-    { nome: "Cirurgias de Emergência", desc: "Intervenções rápidas e precisas para salvar vidas em casos críticos e agudos.", cirurgia: true },
+    { nome: "Cardiologia", desc: "Avaliações e acompanhamento precoce de doenças cardíacas." },
+    { nome: "Cirurgias e Endoscopias", desc: "Procedimentos cirúrgicos seguros e diagnósticos minimamente invasivos." },
+    { nome: "Dermatologia", desc: "Tratamento de alergias, infecções e alterações hormonais." },
+    { nome: "Endocrinologia", desc: "Controle de diabetes, hipotireoidismo e distúrbios da adrenal." },
+    { nome: "Gastroenterologia", desc: "Investigação de vômitos e reabilitação do trato gastrointestinal." },
+    { nome: "Hematologia", desc: "Avaliação de anemias, infecções e distúrbios de coagulação." },
+    { nome: "Medicina de Animais Silvestres e Exóticos", desc: "Atendimento especializado para aves, répteis e pequenos mamíferos." },
+    { nome: "Medicina Felina", desc: "Atendimento exclusivo com foco total no comportamento e particularidades dos gatos." },
+    { nome: "Nefrologia", desc: "Prevenção e manejo contínuo de doenças renais." },
+    { nome: "Nutrologia", desc: "Planos alimentares personalizados por idade e condição física." },
+    { nome: "Odontologia", desc: "Prevenção, diagnóstico e tratamento de doenças da cavidade oral." },
+    { nome: "Oftalmologia", desc: "Diagnóstico de catarata, glaucoma e úlceras de córnea." },
+    { nome: "Oncologia", desc: "Diagnóstico precoce e suporte humanizado no câncer." },
+    { nome: "Ortopedia", desc: "Tratamento de fraturas, luxações e osteoartrite." },
+    { nome: "Pneumologia", desc: "Tratamento de asma, bronquite e suporte respiratório." },
   ];
 
   const faqs = [
     { q: "A anestesia é segura para o meu pet?", a: "Sim! Utilizamos anestesia inalatória, aliada ao suporte de ventilação mecânica e monitoramento multiparamétrico feito por um anestesista veterinário." },
-    { q: "Qual a idade ideal para realizar a castração?", a: "Para cães de pequeno porte e gatos, recomenda-se a partir dos 5 a 6 meses. Para cães grandes, o protocolo pode variar. Agende uma avaliação para definirmos o momento exato e seguro." },
+    { q: "Qual a idade ideal para realizar a limpeza de tártaro?", a: "Para cães de pequeno porte e gatos, recomenda-se a partir dos 1 a 2 anos. Para cães grandes, o protocolo pode variar. Agende uma avaliação para definirmos o momento exato e seguro." },
     { q: "Quais são as formas de pagamento aceitas?", a: "Para sua facilidade, aceitamos cartões de crédito em até 12x, débito, Pix e transferência bancária." },
     { q: "Vocês realizam os exames pré-operatórios na clínica?", a: "Sim, realizamos todos os exames de sangue e cardiológicos necessários no nosso centro de diagnóstico para aprovação cirúrgica." }
   ];
@@ -141,10 +151,10 @@ export default function App() {
                   CENTRO CIRÚRGICO VETERINÁRIO NA VILA BUARQUE
                 </span>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-primary leading-tight mb-6">
-                  Castração Segura e Especializada para o seu <span className="text-accent">Pet</span>
+                  Limpeza de Tártaro Segura e Especializada para o seu <span className="text-accent">Pet</span>
                 </h1>
                 <p className="text-lg md:text-xl text-text-body mb-8 leading-relaxed">
-                  A sua referência em Castração. Infraestrutura de alta complexidade com centro cirúrgico avançado, anestesia inalatória e monitoramento intensivo. Máxima segurança para o procedimento do seu pet.
+                  A sua referência em Profilaxia. Infraestrutura de alta complexidade com centro cirúrgico avançado, anestesia inalatória e monitoramento intensivo. Máxima segurança para o procedimento do seu pet.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a href={ctaHero} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border-2 border-accent px-8 py-4 rounded-full font-bold text-lg text-center transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] inline-flex items-center justify-center gap-2">
@@ -158,8 +168,8 @@ export default function App() {
               <div className="relative">
                 <div className="absolute inset-0 bg-accent/10 rounded-2xl transform rotate-3 scale-105 -z-10"></div>
                 <img 
-                  src="/estrutura/f16606a4-35f5-4fca-999f-a268bf4bba8c.png" 
-                  alt="Cachorrinho paciente no centro cirúrgico da Petiva" 
+                  src="/ChatGPT Image 12 de ago. de 2026, 16_55_38.png" 
+                  alt="Cachorrinho paciente na limpeza de tártaro da Petiva" 
                   className="rounded-2xl shadow-2xl object-cover h-[500px] w-full"
                 />
               </div>
@@ -187,7 +197,7 @@ export default function App() {
             <div className="space-y-4 text-left md:text-center">
               <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Presença de nódulos (caroços)</span> na pele ou nas mamas que não estavam lá antes.</p>
               <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Dificuldade para andar ou mancar</span> de forma persistente, o que pode indicar necessidade de cirurgia ortopédica.</p>
-              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Crescimento de filhote (5 a 6 meses)</span>, marcando a época ideal para castração e prevenção de tumores.</p>
+              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Mau hálito e acúmulo de placa</span>, marcando a época ideal para profilaxia e prevenção de doenças periodontais.</p>
             </div>
           </div>
         </section>
@@ -235,7 +245,7 @@ export default function App() {
                   <Stethoscope className="w-8 h-8 text-accent" />
                 </div>
                 <h3 className="text-2xl font-heading font-bold text-primary mb-4">Centro Cirúrgico Avançado</h3>
-                <p className="text-lg text-text-body">Ambiente rigorosamente esterilizado com equipamentos de suporte à vida de ponta, preparado para castrações eletivas e cirurgias complexas.</p>
+                <p className="text-lg text-text-body">Ambiente rigorosamente esterilizado com equipamentos de suporte à vida de ponta, preparado para profilaxia e cirurgias complexas.</p>
               </div>
               
               <div className="group bg-surface rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border border-gray-100">
@@ -320,11 +330,11 @@ export default function App() {
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {[
-                { nome: "Lucas e a Nina (Gata)", txt: "Castrei a Nina com a Dra. Talita. O corte foi super pequeno, no dia seguinte ela já estava brincando como se nada tivesse acontecido." },
+                { nome: "Lucas e a Nina (Gata)", txt: "Fiz a limpeza de tártaro da Nina com a Dra. Talita. O procedimento foi super tranquilo, no dia seguinte ela já estava brincando como se nada tivesse acontecido." },
                 { nome: "Fernanda e o Thor (Golden)", txt: "Estrutura de primeiro mundo no centro cirúrgico. Fizeram a remoção de um nódulo do Thor com muita competência. A recuperação foi ótima." },
-                { nome: "Roberto e o Simba (Gato)", txt: "A anestesia inalatória e o cuidado no pós-operatório fizeram toda a diferença. O Simba castrou e não sentiu dor alguma, indico de olhos fechados." },
+                { nome: "Roberto e o Simba (Gato)", txt: "A anestesia inalatória e o cuidado no pós-operatório fizeram toda a diferença. O Simba fez a profilaxia e não sentiu dor alguma, indico de olhos fechados." },
                 { nome: "Camila e o Bento (Spitz)", txt: "Tinha pavor de cirurgia, mas a transparência nos exames pré-operatórios me deu paz. A cirurgia ortopédica foi um sucesso absoluto." },
-                { nome: "João e o Rex (SRD)", txt: "Excelente clínica, profissionais cirurgiões muito atenciosos. Me senti muito seguro ao deixar o Rex para a castração, deu tudo certo." }
+                { nome: "João e o Rex (SRD)", txt: "Excelente clínica, profissionais cirurgiões muito atenciosos. Me senti muito seguro ao deixar o Rex para a limpeza de tártaro, deu tudo certo." }
               ].map((dep, i) => (
                 <div key={i} className="w-[280px] md:w-[320px] shrink-0 bg-white p-6 rounded-xl shadow-sm border border-gray-100 relative snap-start flex flex-col">
                   <Star className="w-6 h-6 text-yellow-400 absolute top-6 right-6 fill-current" />
@@ -360,7 +370,7 @@ export default function App() {
                 <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">Dra. Talita Oliveira Rodrigues</h2>
                 
                 <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                  Médica Veterinária formada pela PUC Minas, com vasta experiência em Cirurgia Geral de Tecidos Moles, Castração e Endoscopia.
+                  Médica Veterinária formada pela PUC Minas, com vasta experiência em Cirurgia Geral de Tecidos Moles, Limpeza de Tártaro e Endoscopia.
                 </p>
                 
                 <p className="text-lg mb-10 border-l-4 border-accent pl-6 py-2 text-white/80">
@@ -385,7 +395,7 @@ export default function App() {
         {/* 6. TODAS AS ESPECIALIDADES */}
         <section id="especialidades" className="py-20 bg-surface">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-12">Procedimentos com máxima <span className="text-accent">segurança clínica</span></h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-12">15 especialidades para um <span className="text-accent">diagnóstico preciso</span></h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {(showAllEspecialidades ? especialidades : especialidades.slice(0, 6)).map((esp, i) => (
@@ -405,7 +415,7 @@ export default function App() {
                   onClick={() => setShowAllEspecialidades(true)}
                   className="bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white px-10 py-3 rounded-xl font-bold transition-all shadow-sm hover:shadow-md"
                 >
-                  VER MAIS PROCEDIMENTOS
+                  VER MAIS ESPECIALIDADES
                 </button>
               ) : (
                 <button 
@@ -419,7 +429,7 @@ export default function App() {
                   }}
                   className="bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white px-10 py-3 rounded-xl font-bold transition-all shadow-sm hover:shadow-md"
                 >
-                  VER MENOS PROCEDIMENTOS
+                  VER MENOS ESPECIALIDADES
                 </button>
               )}
             </div>
@@ -515,7 +525,7 @@ export default function App() {
               <div className="bg-surface p-10 rounded-2xl border-l-8 border-accent">
                 <h2 className="text-3xl font-heading font-bold text-primary mb-6">Segurança e Bem-estar</h2>
                 <blockquote className="text-xl italic text-text-body mb-6">
-                  "Nosso compromisso é realizar procedimentos com risco minimizado, desde uma castração eletiva até uma cirurgia complexa, garantindo que você entregue seu pet com confiança e o receba saudável e feliz."
+                  "Nosso compromisso é realizar procedimentos com risco minimizado, desde uma profilaxia até uma cirurgia complexa, garantindo que você entregue seu pet com confiança e o receba saudável e feliz."
                 </blockquote>
                 <div className="flex items-center gap-4 mt-8">
                   <ShieldCheck className="w-10 h-10 text-accent" />
