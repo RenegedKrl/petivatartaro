@@ -8,7 +8,7 @@ import {
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
-  const [showAllEspecialidades, setShowAllEspecialidades] = useState(false);
+  const [showAllProcedimentos, setShowAllProcedimentos] = useState(false);
   const [lightboxImageIndex, setLightboxImageIndex] = useState(null);
   const [showAllGallery, setShowAllGallery] = useState(false);
   const sliderRef = useRef(null);
@@ -62,7 +62,7 @@ export default function App() {
   const ctaGeral = `${baseWhatsApp}Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20na%20Petiva.`;
   const ctaHero = `${baseWhatsApp}Ol%C3%A1%21%20Vi%20o%20site%20e%20gostaria%20de%20agendar%20uma%20limpeza%20de%20t%C3%A1rtaro%20para%20o%20meu%20pet.`;
   const ctaPassos = `${baseWhatsApp}Ol%C3%A1%21%20Estava%20lendo%20sobre%20o%20protocolo%20de%20cirurgia%20segura%20no%20site%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas.`;
-  const ctaEspecialidades = `${baseWhatsApp}Ol%C3%A1%21%20Vi%20as%20especialidades%20no%20site%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20um%20procedimento.`;
+  const ctaProcedimentos = `${baseWhatsApp}Ol%C3%A1%21%20Vi%20os%20procedimentos%20no%20site%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es.`;
   const ctaLocalizacao = `${baseWhatsApp}Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20o%20atendimento%20para%20agendar%20um%20hor%C3%A1rio%20na%20cl%C3%ADnica.`;
   const ctaFinal = `${baseWhatsApp}Ol%C3%A1%21%20Quero%20agendar%20uma%20consulta%20para%20garantir%20a%20sa%C3%BAde%20do%20meu%20pet.`;
 
@@ -71,22 +71,22 @@ export default function App() {
     window.dataLayer.push({ event: 'clique_whatsapp' });
   };
 
-  const especialidades = [
-    { nome: "Cardiologia", desc: "Avaliações e acompanhamento precoce de doenças cardíacas." },
-    { nome: "Cirurgias e Endoscopias", desc: "Procedimentos cirúrgicos seguros e diagnósticos minimamente invasivos." },
-    { nome: "Dermatologia", desc: "Tratamento de alergias, infecções e alterações hormonais." },
-    { nome: "Endocrinologia", desc: "Controle de diabetes, hipotireoidismo e distúrbios da adrenal." },
-    { nome: "Gastroenterologia", desc: "Investigação de vômitos e reabilitação do trato gastrointestinal." },
-    { nome: "Hematologia", desc: "Avaliação de anemias, infecções e distúrbios de coagulação." },
-    { nome: "Medicina de Animais Silvestres e Exóticos", desc: "Atendimento especializado para aves, répteis e pequenos mamíferos." },
-    { nome: "Medicina Felina", desc: "Atendimento exclusivo com foco total no comportamento e particularidades dos gatos." },
-    { nome: "Nefrologia", desc: "Prevenção e manejo contínuo de doenças renais." },
-    { nome: "Nutrologia", desc: "Planos alimentares personalizados por idade e condição física." },
-    { nome: "Odontologia", desc: "Prevenção, diagnóstico e tratamento de doenças da cavidade oral." },
-    { nome: "Oftalmologia", desc: "Diagnóstico de catarata, glaucoma e úlceras de córnea." },
-    { nome: "Oncologia", desc: "Diagnóstico precoce e suporte humanizado no câncer." },
-    { nome: "Ortopedia", desc: "Tratamento de fraturas, luxações e osteoartrite." },
-    { nome: "Pneumologia", desc: "Tratamento de asma, bronquite e suporte respiratório." },
+  const procedimentos = [
+    { nome: "Profilaxia e Limpeza de Tártaro", desc: "Procedimento seguro para cães e gatos, prevenindo doenças periodontais, mau hálito e perda de dentes." },
+    { nome: "Cirurgias de Tecidos Moles", desc: "Remoção de nódulos, biópsias, cirurgias gastrointestinais e do sistema reprodutor." },
+    { nome: "Cirurgias Ortopédicas", desc: "Correção de fraturas, luxações e ruptura de ligamento cruzado com técnicas avançadas." },
+    { nome: "Cirurgias Oncológicas", desc: "Remoção de tumores com margem de segurança e suporte cirúrgico avançado." },
+    { nome: "Cirurgias de Emergência", desc: "Intervenções rápidas e precisas para salvar vidas em casos críticos e agudos." },
+    { nome: "Castração Segura", desc: "Procedimento preventivo para controle reprodutivo, redução de risco de câncer e problemas comportamentais." },
+    { nome: "Endoscopia Veterinária", desc: "Diagnóstico e remoção de corpos estranhos no trato gastrointestinal de forma minimamente invasiva." },
+    { nome: "Biópsias Minimamente Invasivas", desc: "Coleta de amostras de tecidos para diagnóstico preciso com rápida recuperação do pet." },
+    { nome: "Cirurgias Oftalmológicas", desc: "Correção de úlceras de córnea, remoção de catarata e tratamentos avançados para a visão." },
+    { nome: "Laparoscopia", desc: "Cirurgias abdominais realizadas por pequenas incisões, garantindo menos dor e alta precoce." },
+    { nome: "Cirurgias Odontológicas Complexas", desc: "Extrações dentárias avançadas e tratamento de fraturas maxilofaciais." },
+    { nome: "Cirurgias Reconstrutivas", desc: "Reparação de feridas extensas e enxertos de pele após traumas ou remoção de grandes tumores." },
+    { nome: "Rinoscopia e Laringoscopia", desc: "Avaliação das vias aéreas e tratamento de obstruções respiratórias com equipamentos de precisão." },
+    { nome: "Remoção de Cálculos Urinários", desc: "Procedimentos para desobstrução e remoção de pedras nos rins ou bexiga (cistotomia)." },
+    { nome: "Correção de Hérnias", desc: "Tratamento cirúrgico de hérnias umbilicais, inguinais ou diafragmáticas com reforço muscular." },
   ];
 
   const faqs = [
@@ -107,7 +107,7 @@ export default function App() {
             </div>
             
             <nav className="hidden md:flex space-x-8">
-              <a href="#especialidades" className="text-text-body hover:text-accent font-medium transition-colors">Especialidades</a>
+              <a href="#procedimentos" className="text-text-body hover:text-accent font-medium transition-colors">Procedimentos</a>
               <a href="#sobre" className="text-text-body hover:text-accent font-medium transition-colors">Sobre Nós</a>
               <a href="#localizacao" className="text-text-body hover:text-accent font-medium transition-colors">Localização</a>
               <a href="#faq" className="text-text-body hover:text-accent font-medium transition-colors">F.A.Q</a>
@@ -132,7 +132,7 @@ export default function App() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-4 shadow-lg absolute w-full">
-            <a href="#especialidades" onClick={() => setIsMenuOpen(false)} className="block font-medium text-text-body">Especialidades</a>
+            <a href="#procedimentos" onClick={() => setIsMenuOpen(false)} className="block font-medium text-text-body">Procedimentos</a>
             <a href="#sobre" onClick={() => setIsMenuOpen(false)} className="block font-medium text-text-body">Sobre Nós</a>
             <a href="#localizacao" onClick={() => setIsMenuOpen(false)} className="block font-medium text-text-body">Localização</a>
             <a href="#contato" onClick={() => setIsMenuOpen(false)} className="block font-medium text-text-body">Contato</a>
@@ -392,36 +392,36 @@ export default function App() {
           </div>
         </section>
 
-        {/* 6. TODAS AS ESPECIALIDADES */}
-        <section id="especialidades" className="py-20 bg-surface">
+        {/* 6. TODOS OS PROCEDIMENTOS */}
+        <section id="procedimentos" className="py-20 bg-surface">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-12">15 especialidades para um <span className="text-accent">diagnóstico preciso</span></h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-12">15 procedimentos com máxima <span className="text-accent">segurança clínica</span></h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {(showAllEspecialidades ? especialidades : especialidades.slice(0, 6)).map((esp, i) => (
-                <div key={i} className={`p-6 rounded-xl bg-white shadow-sm border ${esp.cirurgia ? 'border-accent/30 bg-accent/5' : 'border-gray-100'} hover:shadow-md transition-shadow`}>
+              {(showAllProcedimentos ? procedimentos : procedimentos.slice(0, 6)).map((proc, i) => (
+                <div key={i} className="p-6 rounded-xl bg-white shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                   <div className="flex items-center gap-3 mb-2">
                     <CheckCircle2 className="w-5 h-5 text-accent" />
-                    <h3 className="font-heading font-bold text-xl text-primary">{esp.nome}</h3>
+                    <h3 className="font-heading font-bold text-xl text-primary">{proc.nome}</h3>
                   </div>
-                  <p className="text-text-body">{esp.desc}</p>
+                  <p className="text-text-body">{proc.desc}</p>
                 </div>
               ))}
             </div>
 
             <div className="mt-12 flex justify-center">
-              {!showAllEspecialidades ? (
+              {!showAllProcedimentos ? (
                 <button 
-                  onClick={() => setShowAllEspecialidades(true)}
+                  onClick={() => setShowAllProcedimentos(true)}
                   className="bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white px-10 py-3 rounded-xl font-bold transition-all shadow-sm hover:shadow-md"
                 >
-                  VER MAIS ESPECIALIDADES
+                  VER MAIS PROCEDIMENTOS
                 </button>
               ) : (
                 <button 
                   onClick={() => {
-                    setShowAllEspecialidades(false);
-                    const element = document.getElementById('especialidades');
+                    setShowAllProcedimentos(false);
+                    const element = document.getElementById('procedimentos');
                     if (element) {
                       const y = element.getBoundingClientRect().top + window.scrollY - 100;
                       window.scrollTo({ top: y, behavior: 'smooth' });
@@ -429,13 +429,13 @@ export default function App() {
                   }}
                   className="bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white px-10 py-3 rounded-xl font-bold transition-all shadow-sm hover:shadow-md"
                 >
-                  VER MENOS ESPECIALIDADES
+                  VER MENOS PROCEDIMENTOS
                 </button>
               )}
             </div>
 
             <div className="mt-8 flex justify-center">
-              <a href={ctaEspecialidades} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border-2 border-accent px-8 py-4 rounded-full font-bold text-lg text-center transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] inline-flex items-center justify-center gap-2">
+              <a href={ctaProcedimentos} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border-2 border-accent px-8 py-4 rounded-full font-bold text-lg text-center transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] inline-flex items-center justify-center gap-2">
                 <span className="absolute left-0 top-0 w-0 h-full bg-[#1e8b8d] transition-all duration-500 ease-out group-hover:w-full z-0"></span>
                 <span className="relative z-10 flex items-center gap-2 transition-colors duration-500">
                   AGENDAR CONSULTA <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
