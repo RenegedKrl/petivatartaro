@@ -73,18 +73,15 @@ export default function App() {
 
   const especialidades = [
     { nome: "Castração (Fêmeas e Machos)", desc: "Procedimento seguro para cães e gatos, prevenindo tumores, infecções uterinas e comportamentos indesejados.", cirurgia: true },
-    { nome: "Profilaxia Odontológica", desc: "Limpeza de tártaro com ultrassom, prevenindo perda de dentes, dor intensa e infecções sistêmicas.", cirurgia: true },
     { nome: "Cirurgias de Tecidos Moles", desc: "Remoção de nódulos, biópsias, cirurgias gastrointestinais e do sistema reprodutor.", cirurgia: true },
     { nome: "Cirurgias Ortopédicas", desc: "Correção de fraturas, luxações e ruptura de ligamento cruzado com técnicas avançadas.", cirurgia: true },
     { nome: "Cirurgias Oncológicas", desc: "Remoção de tumores com margem de segurança e suporte cirúrgico avançado.", cirurgia: true },
-    { nome: "Odontologia Especializada", desc: "Extrações dentárias complexas e tratamento de doenças periodontais graves sob anestesia segura.", cirurgia: true },
     { nome: "Cirurgias de Emergência", desc: "Intervenções rápidas e precisas para salvar vidas em casos críticos e agudos.", cirurgia: true },
   ];
 
   const faqs = [
     { q: "A anestesia é segura para o meu pet?", a: "Sim! Utilizamos anestesia inalatória, aliada ao suporte de ventilação mecânica e monitoramento multiparamétrico feito por um anestesista veterinário." },
     { q: "Qual a idade ideal para realizar a castração?", a: "Para cães de pequeno porte e gatos, recomenda-se a partir dos 5 a 6 meses. Para cães grandes, o protocolo pode variar. Agende uma avaliação para definirmos o momento exato e seguro." },
-    { q: "Com qual idade devo fazer a primeira limpeza de tártaro?", a: "Não existe idade fixa, mas cães de pequeno porte precisam mais cedo (1 a 2 anos). O mau hálito e a gengiva vermelha são os principais alertas de que chegou a hora." },
     { q: "Quais são as formas de pagamento aceitas?", a: "Para sua facilidade, aceitamos cartões de crédito em até 12x, débito, Pix e transferência bancária." },
     { q: "Vocês realizam os exames pré-operatórios na clínica?", a: "Sim, realizamos todos os exames de sangue e cardiológicos necessários no nosso centro de diagnóstico para aprovação cirúrgica." }
   ];
@@ -144,10 +141,10 @@ export default function App() {
                   CENTRO CIRÚRGICO VETERINÁRIO NA VILA BUARQUE
                 </span>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-primary leading-tight mb-6">
-                  Cirurgias seguras, Profilaxia e Castração com <span className="text-accent">excelência</span>.
+                  Castração Segura e Especializada para o seu <span className="text-accent">Pet</span>
                 </h1>
                 <p className="text-lg md:text-xl text-text-body mb-8 leading-relaxed">
-                  Infraestrutura de alta complexidade com centro cirúrgico avançado, anestesia inalatória e monitoramento intensivo. Máxima segurança para o procedimento do seu pet.
+                  A sua referência em Castração. Infraestrutura de alta complexidade com centro cirúrgico avançado, anestesia inalatória e monitoramento intensivo. Máxima segurança para o procedimento do seu pet.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a href={ctaHero} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border-2 border-accent px-8 py-4 rounded-full font-bold text-lg text-center transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] inline-flex items-center justify-center gap-2">
@@ -188,8 +185,6 @@ export default function App() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-heading font-bold text-primary mb-10">Sinais de que seu pet precisa de avaliação:</h2>
             <div className="space-y-4 text-left md:text-center">
-              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Mau hálito forte e persistente</span>, indicando avanço da doença periodontal e acúmulo de tártaro.</p>
-              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Gengivas avermelhadas ou sangrando</span> ao mastigar brinquedos ou ração.</p>
               <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Presença de nódulos (caroços)</span> na pele ou nas mamas que não estavam lá antes.</p>
               <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Dificuldade para andar ou mancar</span> de forma persistente, o que pode indicar necessidade de cirurgia ortopédica.</p>
               <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Crescimento de filhote (5 a 6 meses)</span>, marcando a época ideal para castração e prevenção de tumores.</p>
@@ -325,13 +320,11 @@ export default function App() {
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {[
-                { nome: "Mariana e a Mel (Poodle)", txt: "Estava morrendo de medo da anestesia para limpar o tártaro dela. A equipe foi maravilhosa, me explicou tudo, e a Mel voltou para casa super esperta!" },
                 { nome: "Lucas e a Nina (Gata)", txt: "Castrei a Nina com a Dra. Talita. O corte foi super pequeno, no dia seguinte ela já estava brincando como se nada tivesse acontecido." },
                 { nome: "Fernanda e o Thor (Golden)", txt: "Estrutura de primeiro mundo no centro cirúrgico. Fizeram a remoção de um nódulo do Thor com muita competência. A recuperação foi ótima." },
                 { nome: "Roberto e o Simba (Gato)", txt: "A anestesia inalatória e o cuidado no pós-operatório fizeram toda a diferença. O Simba castrou e não sentiu dor alguma, indico de olhos fechados." },
                 { nome: "Camila e o Bento (Spitz)", txt: "Tinha pavor de cirurgia, mas a transparência nos exames pré-operatórios me deu paz. A cirurgia ortopédica foi um sucesso absoluto." },
-                { nome: "João e o Rex (SRD)", txt: "Excelente clínica, profissionais cirurgiões muito atenciosos. Me senti muito seguro ao deixar o Rex para a castração, deu tudo certo." },
-                { nome: "Aline e o Frajola (Gato)", txt: "A limpeza de tártaro do Frajola salvou os dentinhos dele. Ele voltou a comer melhor no mesmo dia. A Dra. Talita é um amor de pessoa!" }
+                { nome: "João e o Rex (SRD)", txt: "Excelente clínica, profissionais cirurgiões muito atenciosos. Me senti muito seguro ao deixar o Rex para a castração, deu tudo certo." }
               ].map((dep, i) => (
                 <div key={i} className="w-[280px] md:w-[320px] shrink-0 bg-white p-6 rounded-xl shadow-sm border border-gray-100 relative snap-start flex flex-col">
                   <Star className="w-6 h-6 text-yellow-400 absolute top-6 right-6 fill-current" />
@@ -367,7 +360,7 @@ export default function App() {
                 <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">Dra. Talita Oliveira Rodrigues</h2>
                 
                 <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                  Médica Veterinária formada pela PUC Minas, com vasta experiência em Cirurgia Geral de Tecidos Moles, Profilaxia Odontológica e Endoscopia.
+                  Médica Veterinária formada pela PUC Minas, com vasta experiência em Cirurgia Geral de Tecidos Moles, Castração e Endoscopia.
                 </p>
                 
                 <p className="text-lg mb-10 border-l-4 border-accent pl-6 py-2 text-white/80">
@@ -522,7 +515,7 @@ export default function App() {
               <div className="bg-surface p-10 rounded-2xl border-l-8 border-accent">
                 <h2 className="text-3xl font-heading font-bold text-primary mb-6">Segurança e Bem-estar</h2>
                 <blockquote className="text-xl italic text-text-body mb-6">
-                  "Nosso compromisso é realizar procedimentos com risco minimizado, desde uma limpeza de tártaro até uma cirurgia complexa, garantindo que você entregue seu pet com confiança e o receba saudável e feliz."
+                  "Nosso compromisso é realizar procedimentos com risco minimizado, desde uma castração eletiva até uma cirurgia complexa, garantindo que você entregue seu pet com confiança e o receba saudável e feliz."
                 </blockquote>
                 <div className="flex items-center gap-4 mt-8">
                   <ShieldCheck className="w-10 h-10 text-accent" />
