@@ -367,14 +367,14 @@ export default function App() {
                   "Todo procedimento cirúrgico exige rigor máximo. No Petiva, aplicamos protocolos rígidos de anestesia e esterilização para garantir que seu pet acorde tranquilo e sem dor."
                 </p>
 
-                <div className="grid grid-cols-2 gap-6 mt-8">
-                  <div className="bg-white/10 p-6 rounded-xl border border-white/20">
-                    <span className="block text-3xl font-heading font-bold text-accent mb-2">+Segurança</span>
-                    <span className="text-sm font-medium text-white/90">Anestesia Inalatória e Monitoramento</span>
+                <div className="grid grid-cols-2 gap-4 md:gap-6 mt-8">
+                  <div className="bg-white/10 p-4 sm:p-6 rounded-xl border border-white/20 flex flex-col justify-center">
+                    <span className="block text-xl sm:text-2xl md:text-3xl font-heading font-bold text-accent mb-2 truncate">+Segurança</span>
+                    <span className="text-xs sm:text-sm font-medium text-white/90">Anestesia Inalatória e Monitoramento</span>
                   </div>
-                  <div className="bg-white/10 p-6 rounded-xl border border-white/20">
-                    <span className="block text-3xl font-heading font-bold text-accent mb-2">100%</span>
-                    <span className="text-sm font-medium text-white/90">Estrutura Cirúrgica de Ponta</span>
+                  <div className="bg-white/10 p-4 sm:p-6 rounded-xl border border-white/20 flex flex-col justify-center">
+                    <span className="block text-xl sm:text-2xl md:text-3xl font-heading font-bold text-accent mb-2">100%</span>
+                    <span className="text-xs sm:text-sm font-medium text-white/90">Estrutura Cirúrgica de Ponta</span>
                   </div>
                 </div>
               </div>
