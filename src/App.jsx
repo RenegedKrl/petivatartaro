@@ -189,17 +189,7 @@ export default function App() {
             </div>
           </div>
         </div>
-{/* 3. SINAIS DE ALERTA */}
-        <section className="py-16 bg-surface">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-heading font-bold text-primary mb-10">Sinais de que seu pet precisa de avaliação:</h2>
-            <div className="space-y-4 text-left md:text-center">
-              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Dentes amarelados ou com manchas escuras</span>, indicando acúmulo severo de tártaro que precisa de remoção profissional.</p>
-              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Gengivas vermelhas, inchadas ou sangrando</span> ao toque ou durante a mastigação, sinais claros de gengivite.</p>
-              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Mau hálito e acúmulo de placa</span>, marcando a época ideal para profilaxia e prevenção de doenças periodontais.</p>
-            </div>
-          </div>
-        </section>
+{/* 3. SINAIS DE ALERTA REMOVIDO */}
 
         {/* 5. OS PILARES DE EXCELÊNCIA */}
         <section className="py-24 bg-primary">
@@ -207,28 +197,22 @@ export default function App() {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-white text-center mb-16">A estrutura que o seu <span className="text-accent">melhor amigo merece</span></h2>
             
             <div className="grid md:grid-cols-3 gap-10">
-              <div className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-                <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center mb-6">
-                  <HeartPulse className="w-8 h-8 text-accent" />
-                </div>
-                <h3 className="text-2xl font-heading font-bold text-white mb-4">Anestesia Segura (Inalatória)</h3>
-                <p className="text-lg text-white/80">Utilizamos anestesia inalatória com monitoramento multiparamétrico constante, minimizando riscos e garantindo um despertar suave e sem dor.</p>
+              <div className="group bg-white/5 border border-white/10 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex flex-col items-center text-center">
+                <HeartPulse className="w-12 h-12 text-accent mb-5" strokeWidth={1.5} />
+                <h3 className="text-xl font-heading font-bold text-white mb-4">Anestesia Segura (Inalatória)</h3>
+                <p className="text-base text-white/80">Utilizamos anestesia inalatória com monitoramento multiparamétrico constante, minimizando riscos e garantindo um despertar suave e sem dor.</p>
               </div>
               
-              <div className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-                <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center mb-6">
-                  <Stethoscope className="w-8 h-8 text-accent" />
-                </div>
-                <h3 className="text-2xl font-heading font-bold text-white mb-4">Centro Cirúrgico Avançado</h3>
-                <p className="text-lg text-white/80">Ambiente rigorosamente esterilizado com equipamentos de suporte à vida de ponta, preparado para profilaxia e cirurgias complexas.</p>
+              <div className="group bg-white/5 border border-white/10 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex flex-col items-center text-center">
+                <Stethoscope className="w-12 h-12 text-accent mb-5" strokeWidth={1.5} />
+                <h3 className="text-xl font-heading font-bold text-white mb-4">Centro Cirúrgico Avançado</h3>
+                <p className="text-base text-white/80">Ambiente rigorosamente esterilizado com equipamentos de suporte à vida de ponta, preparado para profilaxia e cirurgias complexas.</p>
               </div>
               
-              <div className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-                <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center mb-6">
-                  <Activity className="w-8 h-8 text-accent" />
-                </div>
-                <h3 className="text-2xl font-heading font-bold text-white mb-4">Recuperação Humanizada</h3>
-                <p className="text-lg text-white/80">Controle rigoroso de dor no pós-operatório e baias super confortáveis. Seu pet fica sob observação intensiva até estar 100% pronto para voltar.</p>
+              <div className="group bg-white/5 border border-white/10 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex flex-col items-center text-center">
+                <Activity className="w-12 h-12 text-accent mb-5" strokeWidth={1.5} />
+                <h3 className="text-xl font-heading font-bold text-white mb-4">Recuperação Humanizada</h3>
+                <p className="text-base text-white/80">Controle rigoroso de dor no pós-operatório e baias super confortáveis. Seu pet fica sob observação intensiva até estar 100% pronto para voltar.</p>
               </div>
             </div>
           </div>
