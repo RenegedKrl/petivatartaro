@@ -189,7 +189,17 @@ export default function App() {
             </div>
           </div>
         </div>
-{/* 3. SINAIS DE ALERTA REMOVIDO */}
+        {/* 3. SINAIS DE ALERTA - CASTRAÇÃO */}
+        <section className="py-16 bg-surface">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-heading font-bold text-primary mb-10">Sinais de que seu pet precisa de avaliação para castração:</h2>
+            <div className="space-y-4 text-left md:text-center">
+              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Crescimento de filhote (5 a 6 meses)</span>, marcando a época ideal para castração e prevenção de tumores.</p>
+              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Comportamentos de marcação de território ou agitação</span> ligados a hormônios (como fugas), indicando que a cirurgia trará mais qualidade de vida.</p>
+              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Prevenção ativa de doenças graves</span>, como câncer de mama, próstata e infecções uterinas, aumentando a expectativa de vida do seu pet.</p>
+            </div>
+          </div>
+        </section>
 
         {/* 5. OS PILARES DE EXCELÊNCIA */}
         <section className="py-24 bg-primary">
