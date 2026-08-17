@@ -74,7 +74,6 @@ export default function App() {
   const procedimentos = [
     { nome: "Profilaxia e Limpeza de Tártaro", desc: "Procedimento seguro para cães e gatos, prevenindo doenças periodontais, mau hálito e perda de dentes." },
     { nome: "Cirurgias de Tecidos Moles", desc: "Remoção de nódulos, biópsias, cirurgias gastrointestinais e do sistema reprodutor." },
-    { nome: "Cirurgias Ortopédicas", desc: "Correção de fraturas, luxações e ruptura de ligamento cruzado com técnicas avançadas." },
     { nome: "Cirurgias Oncológicas", desc: "Remoção de tumores com margem de segurança e suporte cirúrgico avançado." },
     { nome: "Cirurgias de Emergência", desc: "Intervenções rápidas e precisas para salvar vidas em casos críticos e agudos." },
     { nome: "Castração Segura", desc: "Procedimento preventivo para controle reprodutivo, redução de risco de câncer e problemas comportamentais." },
@@ -154,7 +153,7 @@ export default function App() {
                   Limpeza de Tártaro Segura e Especializada para o seu <span className="text-accent">Pet</span>
                 </h1>
                 <p className="text-lg md:text-xl text-text-body mb-8 leading-relaxed">
-                  A sua referência em Profilaxia. Infraestrutura de alta complexidade com centro cirúrgico avançado, anestesia inalatória e monitoramento intensivo. Máxima segurança para o procedimento do seu pet.
+                  A sua referência em Profilaxia. Infraestrutura de alta complexidade com centro cirúrgico avançado, anestesia inalatória e monitoramento intensivo.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a href={ctaHero} target="_blank" rel="noreferrer" onClick={trackWhatsAppClick} className="group relative overflow-hidden bg-accent text-white border-2 border-accent px-8 py-4 rounded-full font-bold text-lg text-center transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] inline-flex items-center justify-center gap-2">
@@ -195,8 +194,8 @@ export default function App() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-heading font-bold text-primary mb-10">Sinais de que seu pet precisa de avaliação:</h2>
             <div className="space-y-4 text-left md:text-center">
-              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Presença de nódulos (caroços)</span> na pele ou nas mamas que não estavam lá antes.</p>
-              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Dificuldade para andar ou mancar</span> de forma persistente, o que pode indicar necessidade de cirurgia ortopédica.</p>
+              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Dentes amarelados ou com manchas escuras</span>, indicando acúmulo severo de tártaro que precisa de remoção profissional.</p>
+              <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Gengivas vermelhas, inchadas ou sangrando</span> ao toque ou durante a mastigação, sinais claros de gengivite.</p>
               <p className="p-4 bg-white rounded-lg shadow-sm font-medium border-l-4 border-accent text-lg"><span className="text-primary font-bold">Mau hálito e acúmulo de placa</span>, marcando a época ideal para profilaxia e prevenção de doenças periodontais.</p>
             </div>
           </div>
@@ -309,7 +308,7 @@ export default function App() {
                 { nome: "Lucas e a Nina (Gata)", txt: "Fiz a limpeza de tártaro da Nina com a Dra. Talita. O procedimento foi super tranquilo, no dia seguinte ela já estava brincando como se nada tivesse acontecido." },
                 { nome: "Fernanda e o Thor (Golden)", txt: "Estrutura de primeiro mundo no centro cirúrgico. Fizeram a remoção de um nódulo do Thor com muita competência. A recuperação foi ótima." },
                 { nome: "Roberto e o Simba (Gato)", txt: "A anestesia inalatória e o cuidado no pós-operatório fizeram toda a diferença. O Simba fez a profilaxia e não sentiu dor alguma, indico de olhos fechados." },
-                { nome: "Camila e o Bento (Spitz)", txt: "Tinha pavor de cirurgia, mas a transparência nos exames pré-operatórios me deu paz. A cirurgia ortopédica foi um sucesso absoluto." },
+                { nome: "Camila e o Bento (Spitz)", txt: "Tinha pavor de cirurgia, mas a transparência nos exames pré-operatórios me deu paz. A profilaxia foi um sucesso absoluto." },
                 { nome: "João e o Rex (SRD)", txt: "Excelente clínica, profissionais cirurgiões muito atenciosos. Me senti muito seguro ao deixar o Rex para a limpeza de tártaro, deu tudo certo." }
               ].map((dep, i) => (
                 <div key={i} className="w-[280px] md:w-[320px] shrink-0 bg-white p-6 rounded-xl shadow-sm border border-gray-100 relative snap-start flex flex-col">
@@ -371,7 +370,7 @@ export default function App() {
         {/* 6. TODOS OS PROCEDIMENTOS */}
         <section id="procedimentos" className="py-20 bg-surface">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-12">15 procedimentos com máxima <span className="text-accent">segurança clínica</span></h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-12">14 procedimentos com máxima <span className="text-accent">segurança clínica</span></h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {(showAllProcedimentos ? procedimentos : procedimentos.slice(0, 6)).map((proc, i) => (
