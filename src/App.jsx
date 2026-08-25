@@ -59,12 +59,12 @@ export default function App() {
   };
 
   const baseWhatsApp = "https://wa.me/5511995588000?text=";
-  const ctaGeral = `${baseWhatsApp}Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20na%20Petiva.`;
+  const ctaGeral = `${baseWhatsApp}ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20limpeza%20de%20t%C3%A1rtaro`;
   const ctaHero = `${baseWhatsApp}Ol%C3%A1%21%20Vi%20o%20site%20e%20gostaria%20de%20agendar%20uma%20limpeza%20de%20t%C3%A1rtaro%20para%20o%20meu%20pet.`;
-  const ctaPassos = `${baseWhatsApp}Ol%C3%A1%21%20Estava%20lendo%20sobre%20o%20protocolo%20de%20cirurgia%20segura%20no%20site%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas.`;
-  const ctaProcedimentos = `${baseWhatsApp}Ol%C3%A1%21%20Vi%20os%20procedimentos%20no%20site%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es.`;
-  const ctaLocalizacao = `${baseWhatsApp}Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20o%20atendimento%20para%20agendar%20um%20hor%C3%A1rio%20na%20cl%C3%ADnica.`;
-  const ctaFinal = `${baseWhatsApp}Ol%C3%A1%21%20Quero%20agendar%20uma%20consulta%20para%20garantir%20a%20sa%C3%BAde%20do%20meu%20pet.`;
+  const ctaPassos = `${baseWhatsApp}Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20procedimento%20castra%C3%A7%C3%A3o`;
+  const ctaProcedimentos = `${baseWhatsApp}Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20procedimento%20castra%C3%A7%C3%A3o`;
+  const ctaLocalizacao = `${baseWhatsApp}Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20procedimento%20castra%C3%A7%C3%A3o`;
+  const ctaFinal = `${baseWhatsApp}Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20procedimento%20castra%C3%A7%C3%A3o`;
 
   const trackWhatsAppClick = () => {
     window.dataLayer = window.dataLayer || [];
